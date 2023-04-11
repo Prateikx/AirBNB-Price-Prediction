@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Result</title>
+    <style>
+      body {
+        background-color: #5397c7;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        color: #333333;
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        text-align: center;
+        font-size: 36px;
+        margin-top: 50px;
+      }
+      .result {
+        background-color: #d0e1f1;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+        margin: 50px auto;
+        padding: 30px;
+        width: 80%;
+        max-width: 800px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="result">
+      <h1>Your Inputs</h1>
+      {{ data|safe }}
+      <h3>Predicted Price</h3>
+      <p>$ {{ res }}</p>
+      <form action="{{ url_for('data') }}" method="GET">
+        <button type="submit">Get Data</button>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Airbnb Price Prediction</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f2f2f2;
+      }
+
+      form {
+        width: 50%;
+        margin: 0 auto;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+      }
+
+      h1 {
+        text-align: center;
+        color: #333333;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+        color: #333333;
+      }
+
+      select, input[type=number] {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        margin-bottom: 20px;
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+      }
+
+      select:focus, input[type=number]:focus {
+        outline: none;
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+      }
+
+      input[type=submit] {
+        background-color: #333333;
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      input[type=submit]:hover {
+        background-color: #555555;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Airbnb Price Prediction</h1>
+    <form method="POST" action="/predict">
+      <label for="room_type">Room Type:</label>
+      <select name="room_type" id="room_type">
+        <option value="Entire home/apt">Entire home/apt</option>
+        <option value="Private room">Private room</option>
+        <option value="Shared room">Shared room</option>
+      </select>
+
+      <label for="accommodates">Accommodates:</label>
+      <input type="number" name="accommodates" id="accommodates" min="0" max="20" value="1">
+
+      <label for="bathrooms">Bathrooms:</label>
+      <input type="number" name="bathrooms" id="bathrooms" min="0" max="20" value="1">
+
+      <label for="cancellation_policy">Cancellation Policy:</label>
+      <select name="cancellation_policy" id="cancellation_policy">
+        <option value="flexible">Flexible</option>
+        <option value="moderate">Moderate</option>
+        <option value="strict">Strict</option>
+      </select>
+
+      <label for="cleaning_fee">Cleaning Fee:</label>
+      <select name="cleaning_fee" id="cleaning_fee">
+        <option value="True">True</option>
+        <option value="False">False</option>
+      </select>
+
+      <label for="instant_bookable">Instant Bookable:</label>
+      <select name="instant_bookable" id="instant_bookable">
+        <option value="f">False</option>
+        <option value="t">True</option>
+      </select>
+
+      <label for="bedrooms">Bedrooms:</label>
+      <input type="number" name="bedrooms" id="bedrooms" min="0" max="20" value="1"><br><br>
+      <label for="beds">Beds:</label>
+  <input type="number" name="beds" id="beds" min="0" max="20" value="1"><br><br>
+
+  <input type="submit" value="Predict">
+</form>
+</body>
+</html>
