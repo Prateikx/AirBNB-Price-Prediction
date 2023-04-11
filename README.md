@@ -1,7 +1,7 @@
 # AirBNB-Price-Prediction
 
 
-<h1>The dependencies required to run the above code are:</h>
+<p>The dependencies required to run the above code are:</p>
 
 mariadb - for connecting to the MariaDB database
 pandas - for data manipulation and analysis
